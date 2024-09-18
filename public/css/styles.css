@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+    --header-height: 5rem;
+
+
+    /* ================================= COLORS ================================= */
+    --black-color: #0D0D0D;
+    --color-blue-principal: #1B72BF;
+    --color-blue-second: #30A9D9;
+    --color-blue-light: #88E8F2;
+    --color-yellow-principal: #FF9C00;
+    --color-yellow-second: #FFBF1A;
+    
+    --black-color-light: hsl(220, 24%, 15%);
+    --black-color-lighten: hsl(220, 20%, 18%);
+    --hover-color: hsl(208, 56%, 43%);
+    --yellow-color: #F28705;
+    --yellow-color: #F2B544;
+    --white-color: #fff;
+    --gray-color-light: #f2f2f2;
+    --body-color: hsl(220, 100%, 97%);
+
+
+
+    /* ================================= FONT FAMILY ================================= */
+    --body-font-family: "Lato", sans-serif;
+
+    /* ================================= FONT SIZE ================================= */
+    --body-font-size: 18px;
+    --normal-font-size: 1rem;
+    --large-font-size: 1.2rem;
+    --big-font-size: 1.5rem;
+    --biggest-font-size: 2.5rem;
+
+    /* ================================= FONT WEIGHT ================================= */
+    --thin-weight: 200;
+    --normal-weight: 400;
+    --semibold-weight: 600;
+    --bold-weight: 700;
+
+    /* ================================= Z INDEX ================================= */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+
+/* ================================= RESNPOSINVE FONT SIZE ================================= */
+@media screen and (max-width:1024px) {
+    :root {
+
+        --normal-font-size: 1rem;
+    }
+}
+
+
+
+/* ================================= BASE ================================= */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: var(--body-font-size);
+    background-color: var(--body-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/* ================================= REUSABLE CSS CLASSES ================================= */
+
+.contentor {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+
+
+
+/* ================================= HEADER ================================= */
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--black-color);
+    z-index: var(--z-fixed);
+}
+
+.nav_container {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo {
+    font-weight: var(--semibold-weight);
+    color: var(--white-color);
+    font-size: var(--big-font-size);
+}
+
+.nav_logo img{
+    width: 75px;
+}
+
+.nav_toggle,
+.nav_close {
+    display: flex;
+    color: var(--white-color);
+    font-size: var(--large-font-size);
+    cursor: pointer;
+    font-weight: var(--semibold-weight);
+}
+
+
+
+/* ================================= MEDIA QUERY MOBILE DEVICE ================================= */
+@media screen and (max-width: 1150px) {
+    .nav_menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        background-color: var(--black-color);
+        width: 100%;
+        height: 100%;
+        padding: 6rem 3.5rem 4.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: left .4s;
+    }
+
+    .nav_item {
+        transform: translateX(-150px);
+        visibility: hidden;
+        transition: transform .4s ease-out, visibitily .4s;
+    }
+
+    .nav_item:nth-child(1) {
+        transition-delay: .08s;
+    }
+
+    .nav_item:nth-child(2) {
+        transition-delay: .13s;
+    }
+
+    .nav_item:nth-child(3) {
+        transition-delay: .18s;
+    }
+
+    .nav_item:nth-child(4) {
+        transition-delay: .23s;
+    }
+
+    .nav_item:nth-child(5) {
+        transition-delay: .28s;
+    }
+}
+
+
+.nav_list,
+.nav_extras {
+    display: flex;
+}
+.nav_list {
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.nav_link {
+    position: relative;
+    color: var(--white-color);
+    font-size: var(--big-font-size);
+    font-weight: var(--semibold-weight);
+    display: inline-flex;
+    align-items: center;
+    transition: opacity .4s;
+}
+
+.nav_link:hover span {
+    margin-left: 1.7rem;
+}
+
+.nav_link i {
+    font-weight: var(--normal-weight);
+    font-size: var(--big-font-size);
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility .4s;
+}
+
+.nav_link:hover i {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav_link span {
+    position: relative;
+    transition: margin .4s;
+}
+
+.nav_link span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: width .4s ease-out;
+}
+
+.nav_link:hover span::after {
+    width: 100%;
+}
+
+.nav_list:has(.nav_link:hover) .nav_link:not(:hover) {
+    opacity: .4s;
+}
+
+.nav_close {
+    font-weight: var(--normal-weight);
+    font-size: var(--big-font-size);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.nav_extras {
+    column-gap: 1rem;
+}
+
+.nav_extras_link {
+    color: var(--white-color);
+    font-size: var(--big-font-size);
+    transition: transform .4s;
+}
+
+.nav_extras_link:hover {
+    transform: translateY(-.25rem);
+}
+
+/* ================================= HEADER ================================= */
+.show-menu {
+    left: 0;
+}
+
+.show-menu .nav_item {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+@media screen and (min-width: 1150px) {
+    .search_op{
+        display: none;
+    }
+    .contentor {
+        margin-inline: auto;
+    }
+
+    .nav_container {
+        height: calc(--header-height) + 2rem;
+    }
+
+    .nav_toggle,
+    .nav_close {
+        display: none;
+    }
+
+    .nav_link {
+        font-size: var(--normal-font-size);
+    }
+
+    .nav_link i {
+        font-weight: var(--normal-weight);
+        font-size: var(--large-font-size);
+    }
+
+    .nav_link:hover span {
+        margin-left: 1.5rem;
+    }
+
+    .nav_list {
+        flex-direction: row;
+        column-gap: 2.5rem;
+    }
+
+    .nav_menu {
+        display: flex;
+        align-items: center;
+        column-gap: 3.5rem;
+    }
+}
+
+
+
+/* ================================= SEARCH ================================= */
+.nav_extras form{
+    display: flex;
+    gap: 0;
+}
+
+.nav_extras form button{
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    color: var(--black-color);
+    font-size: var(--normal-font-size);
+    padding: .6rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    border: 2px solid var(--black-color);
+    transition: outline 1s;
+    transition: .4s;
+}
+.nav_extras form button:hover{
+    color: var(--hover-color);
+}
+.search_btn {
+    color: gray;
+    font-size: var(--normal-font-size);
+    padding: .6rem;
+    border-end-end-radius: 10px;
+    border-start-end-radius: 10px;
+    outline: none;
+    border: 2px solid var(--black-color);
+    transition: outline 1s;
+}
+
+.search_link{
+    color: var(--white-color);
+    font-size: var(--big-font-size);
+    font-weight: var(--normal-weight);
+    transition: .4s;
+}
+
+.search_link:hover{
+    color: rgb(141, 141, 141);
+}
+
+.search_btn:hover{
+    border: 2px solid rgb(112, 166, 228);
+}
+
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
+/* ================================= HEADER ================================= */
