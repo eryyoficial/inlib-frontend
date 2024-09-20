@@ -1,97 +1,276 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - InLib</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../../public/css/resto.css">
+    <link rel="stylesheet" href="../../public/css/resto.css">
 </head>
+
 <body>
     <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html" class="active">Sobre Nós</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="support.html">Suporte</a></li>
-            </ul>
+    <header class="header">
+        <nav class="nav_container contentor">
+            <a href="../../index.html" class="nav_logo">
+                <img src="../../public/images/logo (1).png" alt="" srcset="">
+            </a>
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="home.html" class="nav_link">
+                            <i class="ri-home-3-line"></i>
+                            <span>Início</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="livros.html" class="nav_link">
+                            <i class="ri-git-repository-line"></i>
+                            <span>Livros</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav_item">
+                        <a href="support.html" class="nav_link">
+                            <i class="ri-customer-service-2-line"></i>
+                            <span>Suporte</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="sobre.html" class="nav_link">
+                            <i class="ri-information-line"></i>
+                            <span>Sobre</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-circle-line"></i>
+                </div>
+
+                <div class="nav_extras">
+                    <form action="home.html">
+                        <button type="submit">
+                            <i class="ri-search-line"></i>
+                        </button>
+                        <input class="search_btn" type="text" placeholder="Pesquisar...">
+                    </form>
+                    <a href="##" class="nav_extras_link search_op">
+                        <i class="ri-search-line"></i>
+                    </a>
+                    <a href="profile.html" class="nav_extras_link">
+                        <i class="ri-user-line"></i>
+                    </a>
+                    <a href="##" class="nav_extras_link">
+                        <i class="ri-heart-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav_toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
         </nav>
+
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-about">
-        <h1>Sobre Nós</h1>
-        <p>Conheça nossa missão, visão, valores e os projetos que nos movem para o futuro da leitura digital.</p>
-    </section>
-
     <!-- Seção Quem Somos -->
-    <section class="quem-somos">
-        <h2>Quem Somos</h2>
-        <p>O InLib é uma plataforma dedicada a democratizar o acesso à leitura e ao conhecimento digital em Angola. Nossa missão é conectar leitores a uma ampla variedade de livros e autores, promovendo o desenvolvimento pessoal e acadêmico.</p>
+    <section class="quem-somos container">
+        <h1>Sobre Nós</h1>
+        <div class="quem-content">
+            <div class="quem-descricao">
+                <h2>Quem Somos</h2>
+                <p>O InLib é uma plataforma dedicada a democratizar o acesso à leitura e ao conhecimento digital em
+                    Angola. Nossa missão é conectar leitores a uma ampla variedade de livros e autores, promovendo o
+                    desenvolvimento pessoal e acadêmico.</p>
+            </div>
+            <div class="quem-img">
+                <img src="../../public/images/team.png" alt="" srcset="">
+            </div>
+        </div>
     </section>
 
     <!-- Seção Missão, Visão e Valores -->
-    <section class="missao-visao-valores">
+    <section class="missao-visao-valores container">
         <div class="content">
-            <div class="card">
+            <div class="card shadow">
+                <i class="ri-flag-line"></i>
                 <h3>Missão</h3>
-                <p>Proporcionar uma experiência de leitura acessível e digitalmente eficiente para todos os estudantes e leitores em Angola, incentivando a educação contínua e a formação cultural.</p>
+                <p>Proporcionar uma experiência de leitura acessível e digitalmente eficiente para todos os
+                    estudantes e leitores em Angola, incentivando a educação contínua e a formação cultural.</p>
             </div>
-            <div class="card">
+            <div class="card shadow">
+                <i class="ri-eye-line"></i>
                 <h3>Visão</h3>
-                <p>Ser a maior e mais inovadora plataforma de leitura digital em Angola, promovendo o desenvolvimento de uma geração de leitores críticos e engajados com o conhecimento.</p>
+                <p>Ser a maior e mais inovadora plataforma de leitura digital em Angola, promovendo o
+                    desenvolvimento de uma geração de leitores críticos e engajados com o conhecimento.</p>
             </div>
-            <div class="card">
+            <div class="card shadow">
+                <i class="ri-vip-diamond-line"></i>
                 <h3>Valores</h3>
                 <p>Inclusão, Inovação, Sustentabilidade, Colaboração, Excelência Acadêmica.</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção Projetos -->
-    <section class="projetos">
-        <h2>Nossos Projetos</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Projeto de Leitura Acadêmica</h3>
-                <p>Um programa focado em fornecer acesso a materiais acadêmicos para estudantes universitários, apoiando pesquisas e o desenvolvimento educacional em Angola.</p>
+
+    <section class="container sessao sessao-comments">
+        <h2>Comentários</h2>
+        <div class="linha">
+            <div class="cartao">
+                <img src="../../public/images/persons (3).png" alt="" class="foto">
+                <h3>Marinela Guedes</h3>
+                <p>Plataforma incrível, foi fácil de usar.❤️‍🔥</p>
             </div>
-            <div class="project-card">
-                <h3>Incentivo à Leitura Infantil</h3>
-                <p>Promover a leitura desde cedo com iniciativas para crianças, oferecendo livros gratuitos e programas de leitura guiada nas escolas públicas e privadas.</p>
+            <div class="cartao">
+                <img src="../../public/images/persons (2).png" alt="" class="foto">
+                <h3>Nadir Simão</h3>
+                <p>Finalmente consegui encontrar uma biblioteca com livros do meu agrado.😍</p>
             </div>
-            <div class="project-card">
-                <h3>Parceria com Autores Locais</h3>
-                <p>Fortalecer a comunidade literária local, dando voz a novos escritores e promovendo suas obras na nossa plataforma.</p>
+            <div class="cartao">
+                <img src="../../public/images/persons (4).png" alt="" class="foto">
+                <h3>Ngó Nkymbelele</h3>
+                <p>Achei interessante a plataforma!👍</p>
             </div>
         </div>
     </section>
 
     <!-- Seção Desenvolvedores -->
-    <section class="desenvolvedores">
-        <h2>Desenvolvedores</h2>
-        <ul>
-            <li><i class="ri-user-3-line"></i> Equipe de Desenvolvimento Web</li>
-            <li><i class="ri-code-line"></i> Desenvolvedor Líder: Nome do Desenvolvedor</li>
-            <li><i class="ri-code-s-slash-line"></i> Back-end: Nome do Desenvolvedor</li>
-            <li><i class="ri-design-line"></i> Front-end: Nome do Desenvolvedor</li>
-        </ul>
+    <section class="desenvolvedores container">
+        <h2>Equipe InLib</h2>
+        <div class="equipa-content">
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+            <div class="card">
+                <img src="../../public/images/adm.jpg" alt="">
+                <h3>Hermínio Francisco</h3>
+                <p>Dev | Frontend</p>
+                <span>
+                    <a target="_blank" href="https://www.github.com/eryyoficial"><i class="ri-github-fill"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/eryyoficial"><i
+                            class="ri-linkedin-box-fill"></i></a>
+                    <a target="_blank" href="mailto:eryyoficial0@gmail.com"> <i class="ri-mail-send-line"></i></a>
+                </span>
+            </div>
+        </div>
     </section>
 
+
+    <!-- Seção Projetos -->
+    <section class="projetos container">
+        <div class="formulario shadow">
+            <h2>Fale Conosco</h2>
+            <input type="text" class="input_text" id="nome" name="nome" required placeholder="Nome">
+            <div class="error-message" id="nomeError"></div>
+
+            <input type="email" class="input_text" id="email" name="email" required placeholder="Email">
+            <div class="error-message" id="emailError"></div>
+
+            <input type="text" class="input_text" id="assunto" name="assunto" required placeholder="Assunto">
+
+            <textarea class="area_text" id="message" name="message" placeholder="Sua mensagem"
+                rows="30" required></textarea>
+            <div class="error-message" id="emailError"></div>
+        </div>
+    </section>
+
+
     <!-- Footer -->
-    <footer>
+
+    <footer class="footer container">
         <div class="footer-container">
+            <!-- Coluna de Navegação -->
             <div class="footer-column">
                 <h3>InLib</h3>
                 <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Categorias</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="livros.html">Categorias</a></li>
+                    <li><a href="autores">Autores em Ascensão</a></li>
+                    <li><a href="livros.html/#bestsellers">Livros Mais Vendidos</a></li>
                 </ul>
             </div>
+            <!-- Coluna de Contato -->
             <div class="footer-column">
                 <h3>Contato</h3>
                 <ul>
@@ -100,11 +279,35 @@
                     <li><i class="ri-mail-line"></i> suporte@inlib.com</li>
                 </ul>
             </div>
+            <!-- Coluna de Conecte-se -->
+            <div class="footer-column">
+                <h3>Conecte-se Conosco</h3>
+                <ul class="social-icons">
+                    <li><a href="https//:www.facebook.com/inlib"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="https//:www.twitter.com/inlib"><i class="ri-twitter-fill"></i></a></li>
+                    <li><a href="https//:www.linkedin.com/inlib"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="https//:www.instagram.com/inlib"><i class="ri-instagram-fill"></i></a></li>
+                </ul>
+            </div>
+            <!-- Coluna Desenvolvedores -->
+            <div class="footer-column">
+                <h3>Desenvolvedores</h3>
+                <ul>
+                    <li><i class="ri-user-3-line"></i> Equipe de Desenvolvimento Web</li>
+                    <li><i class="ri-code-line"></i> Desenvolvedor Líder: Nome do Desenvolvedor</li>
+                    <li><i class="ri-code-s-slash-line"></i> Back-end: Nome do Desenvolvedor</li>
+                    <li><i class="ri-design-line"></i> Front-end: Nome do Desenvolvedor</li>
+                </ul>
+            </div>
+            <!-- Coluna Instituição -->
             <div class="footer-column">
                 <h3>CEICD</h3>
                 <ul>
-                    <li>Parceria com o <strong>CEICD - Centro de Investigação Científica e Desenvolvimento</strong>.</li>
-                    <li><a href="#">Visite o CEICD</a></li>
+                    <li>Este website foi desenvolvido em parceria com o <strong>CEICD - Centro de Investigação
+                            Científica e Desenvolvimento do Instic</strong>.</li>
+                    <li>O CEICD apoia projetos tecnológicos e científicos em Angola, promovendo inovação e pesquisa de
+                        qualidade.</li>
+                    <li><a href="https//:www.ceicd.com">Visite o CEICD</a></li>
                 </ul>
             </div>
         </div>
@@ -112,5 +315,17 @@
             <p>&copy; 2024 InLib - Todos os Direitos Reservados.</p>
         </div>
     </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="../../public/js/scripts.js"></script>
 </body>
+
 </html>

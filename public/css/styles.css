@@ -8,7 +8,7 @@
     /* ================================= COLORS ================================= */
     --black-color: #212121;
     --black-color-light: #303030;
-    --black-color-lighten: #666666;
+    --color-body: #666666;
     --color-blue-dark: #222d38;
     ;
     --color-blue-principal: #008cc4;
@@ -277,6 +277,7 @@ a {
 
 .destaque_img img {
     width: 300px;
+    cursor: pointer;
 }
 
 .destaque_child {
@@ -294,7 +295,7 @@ a {
 }
 
 .destaque_child p {
-    color: var(--black-color-lighten);
+    color: var(--color-body);
 }
 
 .destaque_child .destaque_btns {
@@ -455,12 +456,12 @@ a {
 }
 
 .content_1 .text-content h3 {
-    font-size: var(--large-font-size);
+    font-size: var(--normal-font-size);
     margin-block: .5rem;
 }
 
 .content_1 .text-content p {
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     margin-bottom: .5rem;
 
 }
@@ -514,8 +515,13 @@ a {
 }
 
 .cartao img {
-    width: 100%;
+    background: linear-gradient(116deg, #00c996 0%, #30A9D9 100%);
     border-radius: 50%;
+    padding: 4px;
+    box-sizing: border-box; 
+    width: 100%; 
+    height: auto; 
+    display: block;
 }
 
 .cartao h3 {
@@ -606,6 +612,7 @@ a {
 }
 
 .best_card {
+    box-shadow: var(--boxshadow2);
     position: relative;
     transition: .4s;
 }
@@ -699,11 +706,11 @@ a {
 
 }
 
-.botao_index:hover{
+.botao_index:hover {
     scale: 1.02;
 }
 
-.hero-content{
+.hero-content {
     display: grid;
     grid-template-columns: repeat(1, 500px);
     place-items: center;
@@ -711,15 +718,15 @@ a {
 }
 
 
-.hero-content .azul{
+.hero-content .azul {
     color: var(--color-yellow-principal);
 }
 
-.hero-content p{
+.hero-content p {
     color: var(--white-color);
 }
 
-.hero-content .btn{
+.hero-content .btn {
     cursor: pointer;
     border: none;
     color: var(--color-yellow-principal);
@@ -729,7 +736,7 @@ a {
     transition: .4s;
 }
 
-.hero-content .btn:hover{
+.hero-content .btn:hover {
     scale: 1.02;
 }
 
@@ -744,88 +751,6 @@ a {
 
 /* ================================= SESSÃO 1 ================================= */
 
-
-/* Estilo Geral do Footer */
-.footer {
-    background-color: var(--color-blue-dark);
-    color: white;
-    padding: 40px 0;
-    font-family: Arial, sans-serif;
-}
-
-.footer-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Estilo das Colunas */
-.footer-column {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-column h3 {
-    color: #ecf0f1;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.footer-column ul li i {
-    color: #3498db;
-    margin-right: 10px;
-}
-
-.footer-column ul li a {
-    color: #bdc3c7;
-    text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-    color: #3498db;
-}
-
-/* Estilo das Redes Sociais */
-.social-icons {
-    display: flex;
-}
-
-.social-icons li {
-    margin-right: 20px;
-}
-
-.social-icons li a {
-    color: #ecf0f1;
-    font-size: 1.8rem;
-    transition: color 0.3s ease;
-}
-
-.social-icons li a:hover {
-    color: #3498db;
-}
-
-/* Estilo do Footer Inferior */
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #7f8c8d;
-    font-size: 1rem;
-    color: #bdc3c7;
-}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -1176,3 +1101,86 @@ a {
 /* ================================= HEADER ================================= */
 /* ================================= HEADER ================================= */
 /* ================================= HEADER ================================= */
+
+
+/* Estilo Geral do Footer */
+.footer {
+    background-color: var(--color-blue-dark);
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilo das Colunas */
+.footer-column {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.footer-column ul li i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.footer-column ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #3498db;
+}
+
+/* Estilo das Redes Sociais */
+.social-icons {
+    display: flex;
+}
+
+.social-icons li {
+    margin-right: 20px;
+}
+
+.social-icons li a {
+    color: #ecf0f1;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #3498db;
+}
+
+/* Estilo do Footer Inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #7f8c8d;
+    font-size: 1rem;
+    color: #bdc3c7;
+}

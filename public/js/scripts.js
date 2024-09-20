@@ -136,6 +136,11 @@ function clearErrors() {
 var swiper = new Swiper(".swipperBestSeller", {
     effect: "cards",
     grabCursor: true,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
 });
 
 

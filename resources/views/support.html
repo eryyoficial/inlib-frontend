@@ -1,35 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte - InLib</title>
+    <title>Sobre Nós - InLib</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../../public/css/resto.css">
+    <link rel="stylesheet" href="../../public/css/resto.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="categorias.html">Categorias</a></li>
-                <li><a href="support.html" class="active">Suporte</a></li>
-            </ul>
+    <header class="header">
+        <nav class="nav_container contentor">
+            <a href="../../index.html" class="nav_logo">
+                <img src="../../public/images/logo (1).png" alt="" srcset="">
+            </a>
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="home.html" class="nav_link">
+                            <i class="ri-home-3-line"></i>
+                            <span>Início</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="livros.html" class="nav_link">
+                            <i class="ri-git-repository-line"></i>
+                            <span>Livros</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav_item">
+                        <a href="support.html" class="nav_link">
+                            <i class="ri-customer-service-2-line"></i>
+                            <span>Suporte</span>
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="sobre.html" class="nav_link">
+                            <i class="ri-information-line"></i>
+                            <span>Sobre</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav_close" id="nav-close">
+                    <i class="ri-close-circle-line"></i>
+                </div>
+
+                <div class="nav_extras">
+                    <form action="home.html">
+                        <button type="submit">
+                            <i class="ri-search-line"></i>
+                        </button>
+                        <input class="search_btn" type="text" placeholder="Pesquisar...">
+                    </form>
+                    <a href="##" class="nav_extras_link search_op">
+                        <i class="ri-search-line"></i>
+                    </a>
+                    <a href="profile.html" class="nav_extras_link">
+                        <i class="ri-user-line"></i>
+                    </a>
+                    <a href="##" class="nav_extras_link">
+                        <i class="ri-heart-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav_toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section
     <section class="hero-support">
         <h1>Centro de Suporte</h1>
         <p>Estamos aqui para ajudar você! Encontre respostas, fale com nossa equipe e tire todas suas dúvidas.</p>
     </section>
 
-    <!-- Seção Perguntas Frequentes -->
+     Seção Perguntas Frequentes 
     <section class="faq">
         <h2>Perguntas Frequentes (FAQ)</h2>
         <div class="faq-item">
@@ -42,26 +98,8 @@
             <p>Clique em "Esqueceu sua senha?" na página de login e siga os passos para redefinir sua senha.</p>
         </div>
     </section>
-
+ -->
     <!-- Seção Contato Direto -->
-    <section class="contact-support">
-        <h2>Fale Conosco</h2>
-        <p>Se as respostas acima não ajudaram, entre em contato conosco diretamente. Estamos prontos para auxiliar.</p>
-        <div class="contact-options">
-            <div class="contact-method">
-                <i class="ri-mail-line"></i>
-                <p><strong>Email:</strong> suporte@inlib.com</p>
-            </div>
-            <div class="contact-method">
-                <i class="ri-phone-line"></i>
-                <p><strong>Telefone:</strong> +244 923 456 789</p>
-            </div>
-            <div class="contact-method">
-                <i class="ri-message-line"></i>
-                <p><strong>Chat Online:</strong> Clique aqui para iniciar o chat com um de nossos atendentes.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- Seção Suporte Técnico -->
     <section class="tech-support">
@@ -74,34 +112,42 @@
         </ul>
     </section>
 
+    <section class="contact-support container">
+        <div class="parts">
+            <div class="formulario shadow">
+                <h2>Fale Conosco</h2>
+                <input type="text" class="input_text" id="nome" name="nome" required placeholder="Nome">
+                <div class="error-message" id="nomeError"></div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>InLib</h3>
-                <ul>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Categorias</a></li>
-                </ul>
+                <input type="email" class="input_text" id="email" name="email" required placeholder="Email">
+                <div class="error-message" id="emailError"></div>
+
+                <input type="text" class="input_text" id="assunto" name="assunto" required placeholder="Assunto">
+
+                <textarea class="area_text" id="message" name="message" placeholder="Sua mensagem" rows="30"
+                    required></textarea>
+                <div class="error-message" id="emailError"></div>
             </div>
-            <div class="footer-column">
-                <h3>Contato</h3>
-                <ul>
-                    <li><i class="ri-map-pin-line"></i> Rua dos Universitários, Luanda, Angola</li>
-                    <li><i class="ri-phone-line"></i> +244 923 456 789</li>
-                    <li><i class="ri-mail-line"></i> suporte@inlib.com</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>CEICD</h3>
-                <ul>
-                    <li>Parceria com o <strong>CEICD - Centro de Investigação Científica e Desenvolvimento</strong>.
-                    </li>
-                    <li><a href="#">Visite o CEICD</a></li>
-                </ul>
+            <div class="contact-options">
+                <div class="contact-method">
+                    <i class="ri-mail-line"></i>
+                    <p><strong>Email:</strong> suporte@inlib.com</p>
+                </div>
+                <div class="contact-method">
+                    <i class="ri-phone-line"></i>
+                    <p><strong>Telefone:</strong> +244 923 456 789</p>
+                </div>
             </div>
         </div>
+    </section>
+
+
+    <footer class=".footer">
+        <ul  class="list_footer">
+            <li><i class="ri-phone-line"></i> +244 923 456 789</li>
+            <li><i class="ri-map-pin-line"></i> Rua dos Universitários, Luanda, Angola</li>
+            <li><i class="ri-mail-line"></i> suporte@inlib.com</li>
+        </ul>
         <div class="footer-bottom">
             <p>© 2024 InLib - Todos os Direitos Reservados.</p>
         </div>
