@@ -1,28 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/styles.css">
     <title>InLib | Biblioteca Digital</title>
+    <link rel="shortcut icon" href="public/images/logo (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+
+        .swiperHero{
+            height: 100vh;
+        }
+        .swiper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .swiper-slide {
+            height: 100vh;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="contentor pai">
-        <form action="home.html" class="formsign" id="registrationForm" onsubmit="return validarFormulario()">
-            <h2 class="title">Iniciar Sessão</h2>
-            <div class="formulario">
-                <input type="email" class="input_text" id="email" name="email" required placeholder="Digite o seu email">
-                <div class="error-message" id="emailError"></div>
-                
-                <input type="password" class="input_text" id="senha" name="senha" required placeholder="Digite sua senha">
-                <div class="error-message" id="senhaError"></div>
+
+    <header style="position: fixed; background-color: transparent;" class="header">
+        <nav class="nav_container contentor nav_index">
+            <a href="resources/views/home.html" class="nav_logo">
+                <img src="public/images/logo (1).png" alt="" srcset="">
+            </a>
+            <div class="nav_btns">
+                <a href="resources/views/signin.html" class="botao_index">Login</a>
+                <a href="resources/views/signup.html" class="botao_index">Criar Conta</a>
             </div>
-            <input id="entrar" class="iniciarsessao" type="submit" value="Entrar">
-            <a href="signup.html" class="link_naotenho">Não tenho conta</a>
-        </form>
+        </nav>
+    </header>
+
+
+    <!-- Swiper -->
+    <div class="swiper swiperHero">
+        <div style="height: 720px;" class="swiper-wrapper">
+            <div style="background: url('public/images/darken.png') no-repeat center/cover;" class="swiper-slide">
+                <div class="hero-content">
+                    <h1>Seja Bem-Vindo ao <a href="resources/views/signin.html" class="azul">Inlib</a></h1>
+                    <p>Nossa missão é tornar o conhecimento acessível a todos. Junte-se à revolução da educação digital.
+                    </p>
+                    <a href="resources/views/signin.html" class="btn">Saiba Mais</a>
+                </div>
+            </div>
+            <div style="background: url('public/images/darken\ \(2\).png') no-repeat center/cover;"
+                class="swiper-slide">
+                <div class="hero-content">
+                    <h1 class="azul">Acesse o Futuro da Educação</h1>
+                    <a href="resources/views/signin.html" class="btn">Aqui</a>
+                </div>
+            </div>
+            <div style="background: url('public/images/darken\ \(1\).png') no-repeat center/cover;"
+                class="swiper-slide">
+                <div class="hero-content">
+                    <h1>Simplifique Com a <a href="resources/views/signin.html" class="azul">Inlib</a></h1>
+                    <p>Com a nossa plataforma, você terá todas as ferramentas necessárias para crescer academicamente.
+                    </p>
+                    <a href="resources/views/signin.html" class="btn">Ver Livros</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
     </div>
 
 
-    <script src="public/js/scripts.js"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".swiperHero", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
+
 </html>

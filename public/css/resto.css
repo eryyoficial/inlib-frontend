@@ -1,0 +1,276 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #0055aa;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-about,
+.hero-support {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-about h1,
+.hero-support h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-about p,
+.hero-support p {
+    font-size: 1.2em;
+}
+
+/* Seção Geral */
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #003366;
+}
+
+/* Quem Somos */
+.quem-somos {
+    text-align: center;
+}
+
+.quem-somos p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Missão, Visão e Valores */
+.missao-visao-valores .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.missao-visao-valores .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    margin: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.missao-visao-valores .card h3 {
+    color: #0055aa;
+    margin-bottom: 10px;
+}
+
+.missao-visao-valores .card p {
+    font-size: 1em;
+}
+
+/* Projetos */
+.projetos .project-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projetos .project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.projetos .project-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* Desenvolvedores */
+.desenvolvedores ul {
+    list-style: none;
+    text-align: center;
+}
+
+.desenvolvedores ul li {
+    font-size: 1.1em;
+    padding: 10px 0;
+}
+
+.desenvolvedores ul li i {
+    margin-right: 10px;
+    color: #0055aa;
+}
+
+/* Perguntas Frequentes (FAQ) */
+.faq .faq-item {
+    margin-bottom: 20px;
+}
+
+.faq .faq-item h3 {
+    font-size: 1.5em;
+    color: #0055aa;
+}
+
+.faq .faq-item p {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+/* Contato Direto e Suporte Técnico */
+.contact-support,
+.tech-support {
+    text-align: center;
+}
+
+.contact-support p,
+.tech-support p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-options .contact-method {
+    margin: 0 15px;
+    text-align: center;
+}
+
+.contact-options .contact-method i {
+    font-size: 2em;
+    color: #0055aa;
+}
+
+.contact-options .contact-method p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 30px 20px;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .footer-column {
+    width: 30%;
+}
+
+footer .footer-column h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+footer .footer-column ul {
+    list-style: none;
+}
+
+footer .footer-column ul li {
+    margin-bottom: 10px;
+}
+
+footer .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-column ul li i {
+    margin-right: 10px;
+}
+
+footer .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .missao-visao-valores .content,
+    .projetos .project-grid,
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .missao-visao-valores .card,
+    .projetos .project-card,
+    .footer-column {
+        width: 80%;
+    }
+
+    .contact-options {
+        flex-direction: column;
+    }
+
+    .contact-options .contact-method {
+        margin-bottom: 20px;
+    }
+}

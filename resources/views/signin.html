@@ -1,36 +1,28 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="../../public/css/styles.css">
     <title>InLib | Biblioteca Digital</title>
 </head>
 <body>
     <div class="contentor pai">
         <form action="home.html" class="formsign" id="registrationForm" onsubmit="return validarFormulario()">
-            <h2 class="title">Registrar-se</h2>
+            <h2 class="title">Iniciar Sessão</h2>
             <div class="formulario">
-                <input type="text" class="input_text" id="nome" name="nome" required placeholder="Nome">
-                <div class="error-message" id="nomeError"></div>
-                
-                <input type="text" class="input_text" id="username" name="username" required placeholder="@username">
-                <div class="error-message" id="usernameError"></div>
-    
                 <input type="email" class="input_text" id="email" name="email" required placeholder="Digite o seu email">
                 <div class="error-message" id="emailError"></div>
                 
                 <input type="password" class="input_text" id="senha" name="senha" required placeholder="Digite sua senha">
                 <div class="error-message" id="senhaError"></div>
             </div>
-            <input id="entrar" class="iniciarsessao" type="submit" value="Registrar">
-            <a href="index.html" class="link_naotenho">Tenho uma conta</a>
+            <input id="entrar" class="iniciarsessao" type="submit" value="Entrar">
+            <a href="signup.html" class="link_naotenho">Não tenho conta</a>
         </form>
     </div>
-    
 
-    <script src="public/js/scripts.js"></script>
+
+    <script src="../../public/js/scripts.js"></script>
 </body>
 </html>

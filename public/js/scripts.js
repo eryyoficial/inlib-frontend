@@ -19,11 +19,34 @@ if(navClose){
 }
 
 
+/*=============== MUDAR ICON HEART LINE PARA FILL ===============*/
+const icon = document.getElementById('heart-icon');
+
+icon.addEventListener('mouseenter', () => {
+    icon.classList.remove('ri-heart-line');
+    icon.classList.add('ri-heart-fill');
+    icon.style.visibility = 'visible'; // Torna o ícone visível
+    icon.style.opacity = '1'; // Define opacidade para 100%
+});
+
+icon.addEventListener('mouseleave', () => {
+    if (!icon.classList.contains('ri-heart-fill')) {
+        icon.classList.remove('ri-heart-fill');
+        icon.classList.add('ri-heart-line');
+        icon.style.opacity = '0'; // Define opacidade para 0%
+        icon.style.visibility = 'hidden'; // Torna o ícone invisível
+    }
+});
+
+icon.addEventListener('click', () => {
+    icon.style.visibility = 'visible'; // Garante que o ícone fique visível
+    icon.style.opacity = '1'; // Garante opacidade 100%
+    icon.classList.remove('ri-heart-line'); // Remove a classe line
+    icon.classList.add('ri-heart-fill'); // Adiciona a classe fill
+});
 
 
-
-
-
+/*=============== VALIDAÇÃO DOS FORMULÁRIOS SIGNs ===============*/
 function iniciarsessão() {
     window.location.href = "home.html";     
 }
@@ -101,3 +124,27 @@ function clearErrors() {
         input.classList.remove('error');
     });
 }
+
+
+
+/*=============== SWIPER ===============*/
+
+ 
+
+
+
+var swiper = new Swiper(".swipperBestSeller", {
+    effect: "cards",
+    grabCursor: true,
+});
+
+
+
+
+
+
+
+
+
+
+
